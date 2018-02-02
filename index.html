@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>React Atomic Design Example</title>
+<link rel="stylesheet" href="resources/generated/styles/main.css">
+</head>
+<body>
+    <div id="container"/></div>
+    <script src="resources/plugins/react.js"></script>
+    <script src="resources/plugins/react-dom.js"></script>
+    <script src="resources/plugins/require.js"></script>
+    <script src="resources/plugins/jquery-1.12.1.js"></script>
+    <script src="resources/plugins/bootstrap.min.js"></script>
+    <script>
+        requirejs.config({
+        	baseUrl: 'resources',    
+           	waitSeconds: 200,
+       	    paths: {
+            	'jquery': 'plugins/jquery-1.12.1',
+                'jqueryui': 'plugins/jquery-ui.min',
+                'bootstrap': 'plugins/bootstrap.min',
+                'react':'plugins/react'
+            }
+        });
+        require(['react','generated/app/app'], function() {});   
+    </script>
+</body>
+</html>
